@@ -3,7 +3,9 @@ import Container from "../../../Container";
 import Hero from "../../sections/Hero";
 import Logo from "../Logo";
 import Navbar from "./Navbar";
+import { useState } from "react";
 const Header = () => {
+  const [navbarState, setNavbarState] = useState(false);
   const currentLocation = useLocation();
   return (
     <>
@@ -25,20 +27,16 @@ const Header = () => {
           </div>
           <div className="header_bottom">
             <div className="container-fluid">
-              <nav className="navbar navbar-expand-lg custom_nav-container">
+              <nav className="navbar">
                 <Logo />
                 <button
                   className="navbar-toggler"
                   type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
+                  onClick={() => setNavbarState((prev) => !prev)}
                 >
                   <span className=""> </span>
                 </button>
-                <Navbar />
+                <Navbar navbarState={navbarState} />
               </nav>
             </div>
           </div>

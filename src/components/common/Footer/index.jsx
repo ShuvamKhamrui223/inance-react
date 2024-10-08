@@ -5,8 +5,8 @@ const Footer = () => {
     <footer className="footer_section">
       <div className="container">
         <p className="">
-          &copy; <span id="displayDateYear"></span> made by
-          <Link className="" to={""}>
+          made by
+          <Link className="creator-profile" to={""}>
             shuvam khmarui
           </Link>
         </p>

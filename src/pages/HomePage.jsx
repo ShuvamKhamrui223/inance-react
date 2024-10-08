@@ -13,7 +13,7 @@ const HomePage = () => {
       <Services />
       <Professionals />
       <Clients />
-      <Contact/>
+      <Contact />
     </>
   );
 };
